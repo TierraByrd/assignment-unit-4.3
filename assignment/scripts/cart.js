@@ -5,13 +5,32 @@ console.log('***** Cart Functions *****');
 let basket = [];
 function addItem(item){
     basket.push(item);
+    console.log("An item was added: ", item);
     return true;
 }
+addItem('bread');
+addItem('grapes');
+addItem('cereal');
+addItem('water');
 
 
+function listItems() {
+    for (let i=0; i<basket.length; i++) {
+console.log('Listed items: ', basket[i]);
+}
+}
+listItems();
 
+function empty(){
+    while (basket.length > 0){
+        basket.pop();
+        console.log('Emptying the basket:', empty());
+    }
+}
+empty();
 
-
+const maxItems = 5; 
+console.log('Max items: ', maxItems);
 
 
 
